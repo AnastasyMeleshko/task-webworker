@@ -1,0 +1,174 @@
+//import fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+// import scss
+@import "pallete";
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+.#{$project-name} {
+
+  &__container {
+    padding: 10px 300px;
+    margin: 0 auto;
+    font-family: $font;
+
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 200px;
+    }
+
+    &__dropdown {
+      position: relative;
+      display: inline-block;
+
+      &-btn {
+        background-color: $pink-color;
+        border: none;
+        color: $grey-color;
+        padding: 10px 20px;
+        cursor: pointer;
+        min-width: 160px;
+      }
+
+      &-content {
+        display: none;
+        position: absolute;
+        background-color: $light-pink-color;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 $boxShadowColor;
+        z-index: 1;
+
+        a {
+          color: $grey-color;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+
+          &:hover {
+            background-color: $bg-color;
+          }
+        }
+      }
+
+      &:hover .project__container__dropdown-content {
+        display: block;
+      }
+    }
+
+    &__select {
+      position: relative;
+      margin-bottom: 200px;
+
+      &-checkbox {
+        display: none;
+      }
+
+      &-label {
+        display: block;
+        background-color: $light-grey-color;
+        color: $white-color;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      &-options {
+        width: 100%;
+        display: none;
+        position: absolute;
+        background-color: $white-color;
+        border: 1px solid $bg-color;
+        padding: 0;
+        list-style: none;
+        margin-top: 5px;
+      }
+
+      &-option {
+        padding: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $bg-color;
+        }
+      }
+
+      &-checkbox:checked ~ &-options {
+        display: block;
+      }
+    }
+
+    &__animation {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: $animation-box-width;
+      height: 600px;
+      margin: 0 auto 30px;
+
+      &__item {
+        width: 100%;
+        height: 100px;
+        border: 2px solid $bg-color;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+
+        &-elem {
+          background-color: $violet-color;
+          height: 50px;
+          width: $animation-elem-width;
+          position: relative;
+          left: 0;
+        }
+
+        &-elem-keyframes {
+          animation: customAnimation 2s infinite alternate;
+        }
+
+        @keyframes customAnimation {
+          0% {
+            left: 0;
+          }
+
+          100% {
+            left: calc(100% - #{$animation-elem-width});
+          }
+
+        }
+
+        &-elem-transform {
+          animation: build-in 3s linear infinite;
+        }
+
+          @keyframes build-in {
+            0% {
+              transform: translateX(0px);
+            }
+            100% {
+              transform: translateX(calc(#{$animation-box-width} - #{$animation-elem-width}));
+            }
+          }
+
+      }
+    }
+  }
+
+}
+
+
+
