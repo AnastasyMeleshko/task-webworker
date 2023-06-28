@@ -148,6 +148,7 @@ li {
 }
 .project__container__animation__item-elem-transition:hover {
   transform: translateX(450px);
+  background-color: #ffdede;
 }
 .project__btn {
   display: inline-block;
