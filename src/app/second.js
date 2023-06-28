@@ -19,7 +19,7 @@ const animate = () => {
         }
     }
 
-    setTimeout(animate, 300);
+    setTimeout(animate,  300);
 };
 
 animate();
