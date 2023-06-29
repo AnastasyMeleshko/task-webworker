@@ -48,5 +48,4 @@ function receivedWorkerMessage(event) {
   console.log("Result:", sortedArrays);
 }
 
-document.getElementById("project__btn").addEventListener("click", startSorts);
 document.getElementsByClassName("project__btn")[0].addEventListener("click", startSorts);
