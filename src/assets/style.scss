@@ -172,7 +172,13 @@ li {
           transition: transform 10s ease-in-out;
 
           & {
-            transform: translateX(450px);
+            transform: translateX(50px);
+            & {
+              transform: translateX(200px);
+              & {
+                transform: translateX(450px);
+              }
+            }
           }
 
           &:hover {

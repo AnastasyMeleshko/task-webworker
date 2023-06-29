@@ -147,6 +147,12 @@ li {
   transition: transform 10s ease-in-out;
 }
 .project__container__animation__item-elem-transition {
+  transform: translateX(50px);
+}
+.project__container__animation__item-elem-transition {
+  transform: translateX(200px);
+}
+.project__container__animation__item-elem-transition {
   transform: translateX(450px);
 }
 .project__container__animation__item-elem-transition:hover {
