@@ -144,10 +144,12 @@ li {
   }
 }
 .project__container__animation__item-elem-transition {
-  transition: transform 3s ease-in-out;
+  transition: transform 10s ease-in-out;
+}
+.project__container__animation__item-elem-transition {
+  transform: translateX(450px);
 }
 .project__container__animation__item-elem-transition:hover {
-  transform: translateX(450px);
   background-color: #ffdede;
 }
 .project__btn {

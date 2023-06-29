@@ -159,23 +159,25 @@ li {
           animation: build-in 3s linear infinite;
         }
 
-          @keyframes build-in {
-            0% {
-              transform: translateX(0px);
-            }
-            100% {
-              transform: translateX(calc(#{$animation-box-width} - #{$animation-elem-width}));
-            }
+        @keyframes build-in {
+          0% {
+            transform: translateX(0px);
           }
+          100% {
+            transform: translateX(calc(#{$animation-box-width} - #{$animation-elem-width}));
+          }
+        }
 
         &-elem-transition {
-          transition: transform 3s ease-in-out;
+          transition: transform 10s ease-in-out;
 
-          &:hover {
-               transform: translateX(450px);
-               background-color: $light-pink-color;
+          & {
+            transform: translateX(450px);
           }
 
+          &:hover {
+            background-color: $light-pink-color;
+          }
         }
 
       }

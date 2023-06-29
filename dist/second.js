@@ -15,7 +15,7 @@
   \***************************/
 /***/ (() => {
 
-eval("const block = document.querySelector('.project__container__animation__item-elem-timeout');\r\nlet position = 0;\r\nlet direction = 'right';\r\n\r\nconst animate = () => {\r\n    if (direction === 'right') {\r\n        position += 5;\r\n        block.style.left = `${position}px`;\r\n\r\n        if (position >= 445) {\r\n            direction = 'left';\r\n        }\r\n    } else {\r\n        position -= 5;\r\n        block.style.left = `${position}px`;\r\n\r\n        if (position <= 0) {\r\n            direction = 'right';\r\n        }\r\n    }\r\n\r\n    setTimeout(animate,  300);\r\n};\r\n\r\nanimate();\r\n\n\n//# sourceURL=webpack://style/./src/app/second.js?");
+eval("const block = document.querySelector(\r\n  \".project__container__animation__item-elem-timeout\"\r\n);\r\nlet position = 0;\r\nlet direction = \"right\";\r\n\r\nconst animate = () => {\r\n  if (direction === \"right\") {\r\n    position += 5;\r\n    block.style.left = `${position}px`;\r\n\r\n    if (position >= 445) {\r\n      direction = \"left\";\r\n    }\r\n  } else {\r\n    position -= 5;\r\n    block.style.left = `${position}px`;\r\n\r\n    if (position <= 0) {\r\n      direction = \"right\";\r\n    }\r\n  }\r\n\r\n  setTimeout(animate, 300);\r\n};\r\n\r\nanimate();\r\n\n\n//# sourceURL=webpack://style/./src/app/second.js?");
 
 /***/ })
 
